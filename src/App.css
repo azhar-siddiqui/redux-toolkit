@@ -21,3 +21,51 @@
     transform: rotate(360deg);
   }
 }
+
+.loginContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.formContainer {
+  height: 500px;
+  width: 500px;
+  border-radius: 30px;
+  text-align: center;
+  padding: 70px 50px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.fieldContainer {
+  padding-top: 50px;
+}
+
+.fieldContainer input {
+  width: 100%;
+  padding: 7px 15px;
+  border: 1px solid #e96839;
+  outline: none;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.submitBtn {
+  font-size: 16px;
+  font-weight: 100;
+  padding: 7px 70px;
+  background: #fff;
+  border: 1px solid #e96839;
+  color: #e96839;
+}
+
+.submitBtn:hover {
+  color: #fff;
+  background: #e96839;
+  transition: ease 0.5s;
+  cursor: pointer;
+  letter-spacing: 1px;
+}

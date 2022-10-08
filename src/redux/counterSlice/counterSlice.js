@@ -8,16 +8,27 @@ export const counterSlice = createSlice({
   name: "counter",
   initialState,
   reducers: {
-    handleIncrementCount: (count) => {
-      count.value += 1;
+    handleIncrementCount: (state) => {
+      state.value = state.value + 1;
     },
-    handleDecrementCount: (count) => {
-      count.value -= 1;
+    handleDecrementCount: (state) => {
+      state.value = state.value - 1;
+    },
+    handleIncrementByAmount: (state, action) => {
+      state.value = state.value + action.payload;
+    },
+    handleDecrementByAmount: (state, action) => {
+      state.value = state.value - action.payload;
     },
   },
 });
 
-export const { handleIncrementCount, handleDecrementCount } =
-  counterSlice.actions;
-export const selectCount = (count) => count.counter.value;
+export const {
+  handleIncrementCount,
+  handleDecrementCount,
+  handleIncrementByAmount,
+  handleDecrementByAmount,
+} = counterSlice.actions;
+
+export const selectCount = (state) => state.counter.value;
 export default counterSlice.reducer;
