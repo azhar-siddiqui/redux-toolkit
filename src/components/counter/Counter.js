@@ -5,7 +5,7 @@ import {
   handleDecrementCount,
   selectCount,
 } from "../../redux/counterSlice/counterSlice";
-
+// first changes
 const Counter = () => {
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
